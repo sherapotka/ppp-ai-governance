@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import PageHeader from "@/components/PageHeader";
 import { jurisdictions, pppSubDimensions } from "@/data/regulations";
 import type { Jurisdiction } from "@/data/regulations";
 
@@ -33,18 +32,6 @@ const dimensionMeta: Record<Dimension, { label: string; color: string; bg: strin
     description: "AI classification, infrastructure, data governance, safety, content labeling, GPAI provisions",
   },
 };
-
-function getRatingColor(level: string, dim: Dimension): string {
-  if (level === "Mandatory") return dimensionMeta[dim].color;
-  if (level === "Recommended") return "#fbbf24";
-  return "#d1d5db";
-}
-
-function getRatingLabel(level: string): string {
-  if (level === "Mandatory") return "M";
-  if (level === "Recommended") return "R";
-  return "\u2013";
-}
 
 function getMandatoryCount(j: Jurisdiction, dim: Dimension): number {
   const dimData = j.ppp[dim] as Record<string, { level: string }>;
