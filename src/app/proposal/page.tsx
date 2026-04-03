@@ -5,7 +5,7 @@ export default function ProposalPage() {
     <>
       <PageHeader
         title="Research Proposal"
-        subtitle="Governing AI Across Borders: A Comparative Survey Through the PPP Analytical Lens"
+        subtitle="People, Processes, Platforms: A Coding Framework and Comparative Benchmark for Global AI Governance"
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <article className="prose prose-neutral max-w-none">
@@ -112,11 +112,10 @@ export default function ProposalPage() {
             </h2>
             <ol className="space-y-3 list-decimal list-inside">
               {[
-                "An operationalized PPP coding scheme (17 sub-dimensions) for comparative AI regulatory analysis, designed for reproducibility and extensibility.",
-                "A systematic empirical mapping of AI regulatory provisions across nine jurisdictions, current through 2026.",
-                "A regulatory typology grounded in observed PPP configuration patterns.",
-                "Gap and interdependency analysis identifying weakly addressed sub-dimensions and cross-dimensional linkages.",
-                "Policy-relevant observations on convergence opportunities and harmonization barriers.",
+                "A validated PPP coding framework with 17 sub-dimensions for comparative AI regulatory analysis, with 87.6% AI-human agreement across 170 classifications.",
+                "A systematic provision-level comparative matrix of global AI governance covering 12 instruments across 10 jurisdictions as of early 2026.",
+                "Identification of two structural determinants of regulatory coherence: classification as a cross-dimensional trigger and the institutional creation threshold.",
+                "Five testable propositions about the relationship between regulatory architecture and governance outcomes.",
               ].map((c, i) => (
                 <li key={i} className="text-sm text-neutral-700 leading-relaxed">
                   {c}

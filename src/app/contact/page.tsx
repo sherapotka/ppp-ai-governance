@@ -58,11 +58,10 @@ export default function ContactPage() {
             </h2>
             <p className="text-sm text-neutral-600 leading-relaxed">
               This website serves as a companion to the research paper
-              &ldquo;Governing AI Across Borders: A Comparative Survey of Global
-              AI Regulatory Frameworks Through the People&ndash;Processes&ndash;Platforms
-              Analytical Lens.&rdquo; It is designed as a living resource that
-              can be updated as regulations evolve, complementing the static
-              analysis in the published paper.
+              &ldquo;People, Processes, Platforms: A Coding Framework and
+              Comparative Benchmark for Global AI Governance.&rdquo; It is
+              designed as a living resource that can be updated as regulations
+              evolve, complementing the static analysis in the published paper.
             </p>
           </div>
         </div>
@@ -73,10 +72,9 @@ export default function ContactPage() {
             Suggested Citation
           </h2>
           <div className="bg-white border border-neutral-200 rounded p-4 font-mono text-xs text-neutral-600 leading-relaxed">
-            Potka, S. (2026). Governing AI Across Borders: A Comparative Survey
-            of Global AI Regulatory Frameworks Through the
-            People&ndash;Processes&ndash;Platforms Analytical Lens.
-            Department of Computer Science, University of Victoria.
+            Potka, S. &amp; Weber, J. (2026). People, Processes, Platforms:
+            A Coding Framework and Comparative Benchmark for Global AI
+            Governance. Department of Computer Science, University of Victoria.
           </div>
         </div>
 

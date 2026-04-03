@@ -303,7 +303,24 @@ export default function AnalysisPage() {
             })}
           </div>
         </div>
-      </div>
+        {/* Link to Findings */}
+        <div className="mt-12 bg-primary-50 border border-primary-100 rounded-lg p-6 text-center">
+          <h3 className="font-bold text-neutral-900 mb-2">
+            What does this data reveal?
+          </h3>
+          <p className="text-sm text-neutral-600 mb-4 max-w-xl mx-auto">
+            From this comparative matrix, we identify two structural determinants
+            of regulatory coherence and derive five testable propositions about
+            global AI governance.
+          </p>
+          <a
+            href="/findings"
+            className="inline-block bg-primary-900 text-white px-6 py-2.5 rounded font-semibold text-sm hover:bg-primary-800 transition-colors"
+          >
+            View Findings &amp; Propositions
+          </a>
+        </div>
+        </div>
     </>
   );
 }

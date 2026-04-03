@@ -116,7 +116,7 @@ export default function Home() {
             Jurisdictions Under Study
           </h2>
           <p className="text-neutral-600 mb-10 max-w-2xl">
-            The survey examines regulatory frameworks across nine jurisdictions
+            The survey examines regulatory frameworks across ten jurisdictions
             and international initiatives, selected for regulatory significance,
             typological diversity, and geographic coverage.
           </p>
@@ -161,33 +161,93 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Research Questions */}
+      {/* Key Findings */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-neutral-900 mb-2">
+            Key Findings
+          </h2>
+          <p className="text-neutral-600 mb-10 max-w-2xl">
+            Two structural features account for substantial variation in regulatory
+            coherence across the jurisdictions studied.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* Finding 1: Classification Trigger */}
+            <div className="border-l-4 border-emerald-500 bg-emerald-50 rounded-r-lg p-6">
+              <h3 className="text-lg font-bold text-neutral-900 mb-2">
+                Classification as Regulatory Trigger
+              </h3>
+              <p className="text-sm text-neutral-700 leading-relaxed mb-4">
+                Jurisdictions with formal AI classification schemes exhibit a
+                cascading obligation structure where a single taxonomic decision
+                activates calibrated requirements across all three PPP dimensions.
+              </p>
+              <div className="flex gap-6">
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-emerald-700">12</p>
+                  <p className="text-xs text-neutral-500">avg. mandatory provisions<br/>with classification</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-neutral-400">0.2</p>
+                  <p className="text-xs text-neutral-500">avg. mandatory provisions<br/>without classification</p>
+                </div>
+              </div>
+              <p className="text-xs text-neutral-500 mt-4 italic">
+                Observed in EU, China, Colorado, Canada (cascading) vs. UK, Singapore, Japan, OECD, UNESCO (flat)
+              </p>
+            </div>
+
+            {/* Finding 2: Institutional Creation Threshold */}
+            <div className="border-l-4 border-blue-500 bg-blue-50 rounded-r-lg p-6">
+              <h3 className="text-lg font-bold text-neutral-900 mb-2">
+                Institutional Creation Threshold
+              </h3>
+              <p className="text-sm text-neutral-700 leading-relaxed mb-4">
+                Jurisdictions converge on provisions implementable through existing
+                institutions but diverge on provisions requiring new governance
+                infrastructure &mdash; independent of regulatory philosophy.
+              </p>
+              <div className="flex gap-6">
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-blue-700">76%</p>
+                  <p className="text-xs text-neutral-500">adaptation provisions<br/>addressed</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-neutral-400">27%</p>
+                  <p className="text-xs text-neutral-500">creation provisions<br/>addressed</p>
+                </div>
+              </div>
+              <p className="text-xs text-neutral-500 mt-4 italic">
+                Creation provisions: certification (PR4), incident reporting (PR5), regulatory sandboxes (PR6)
+              </p>
+            </div>
+          </div>
+
+          {/* Research Questions */}
           <h2 className="text-2xl font-bold text-neutral-900 mb-8">
-            Research Questions
+            Research Questions &amp; Findings
           </h2>
           <div className="space-y-5 max-w-4xl">
             {[
               {
                 question: "How do major AI regulatory frameworks distribute requirements across People, Processes, and Platforms dimensions?",
-                result: "The EU AI Act is the only framework with mandatory provisions across all 17 sub-dimensions. The U.S. federal approach relies predominantly on recommended (voluntary) measures, while China concentrates mandatory provisions on Platforms and Processes, with lighter People-dimension requirements.",
+                result: "The EU is the only jurisdiction with mandatory coverage across all 17 sub-dimensions (17M). Among binding frameworks, mandatory coverage ranges from 17 (EU) to 1 (Japan). The three voluntary/principles-based frameworks (UK, Singapore, Japan) converge on 0\u20131 mandatory and 8\u201311 recommended provisions.",
               },
               {
                 question: "What regulatory philosophies underpin different frameworks, and how do they shape PPP emphasis?",
-                result: "Five distinct regulatory philosophies emerge: comprehensive risk-based (EU), sector-based innovation-driven (USA), state-directed (China), principles-based (UK, Singapore), and promotional (Japan). Risk-based regimes show the most balanced PPP distribution; innovation-first regimes skew toward voluntary Processes provisions.",
+                result: "Six regulatory philosophies identified. Philosophy predicts which PPP dimension receives emphasis (rights-based \u2192 People; state-directed \u2192 Platforms), but does not predict total coverage \u2014 which is determined by architectural features.",
               },
               {
                 question: "On which PPP sub-dimensions do frameworks converge or diverge most?",
-                result: "Highest convergence: transparency requirements (PR3) and risk assessment (PR1) appear in nearly all frameworks. Highest divergence: GPAI/foundation model provisions (PL6), content labeling (PL5), and affected persons\u2019 rights (P5) vary dramatically across jurisdictions.",
+                result: "Highest convergence: transparency (PR3) and accountability (P2) are addressed by all 10 jurisdictions. Highest divergence: GPAI provisions (PL6), certification (PR4), and content labeling (PL5) are mandatory in at most 2 jurisdictions.",
               },
               {
                 question: "How do interdependencies between PPP dimensions manifest across regimes?",
-                result: "AI system classification (PL1) functions as a regulatory trigger: jurisdictions with formal risk tiers (EU, Colorado) tie People and Processes obligations directly to classification level. Jurisdictions without classification (UK, Singapore) show weaker cross-dimensional linkages.",
+                result: "AI system classification (PL1) functions as a cross-dimensional regulatory trigger. Jurisdictions with classification (EU, China, Colorado, Canada) average 11.5 mandatory provisions; those without average 0.2.",
               },
               {
                 question: "What gaps emerge, and what do they imply for international harmonization?",
-                result: "Workforce training (P4), incident reporting (PR5), and infrastructure standards (PL2) are the most underaddressed sub-dimensions globally. Divergence on GPAI provisions and enforcement mechanisms presents the highest barriers to mutual recognition across jurisdictions.",
+                result: "Five critical gaps: GPAI regulation (PL6), certification (PR4), incident reporting (PR5), content labeling (PL5), and workforce training (P4). These are bounded by the institutional creation threshold \u2014 they require new governance infrastructure that most jurisdictions have not built.",
               },
             ].map((item, i) => (
               <div
@@ -203,7 +263,7 @@ export default function Home() {
                 <div className="bg-primary-50 border-t border-primary-100 px-4 py-3 ml-0">
                   <div className="flex items-start gap-4">
                     <span className="text-xs font-semibold text-primary-600 uppercase tracking-wider whitespace-nowrap mt-0.5">
-                      Expected
+                      Finding
                     </span>
                     <p className="text-sm text-neutral-600 leading-relaxed">{item.result}</p>
                   </div>
@@ -230,9 +290,8 @@ export default function Home() {
               Potka, S. &amp; Weber, J.
             </p>
             <p className="text-white text-lg font-semibold leading-snug mb-2">
-              Governing AI Across Borders: A Comparative Survey of Global AI
-              Regulatory Frameworks Through the People&ndash;Processes&ndash;Platforms
-              Analytical Lens
+              People, Processes, Platforms: A Coding Framework and Comparative
+              Benchmark for Global AI Governance
             </p>
             <p className="text-primary-300 text-sm">
               Department of Computer Science, University of Victoria, 2026.
@@ -253,11 +312,11 @@ export default function Home() {
             </div>
           </div>
           <p className="text-primary-400 text-sm leading-relaxed mb-6">
-            This paper presents a systematic comparative analysis of AI regulatory
-            frameworks across nine jurisdictions using an operationalized
-            People&ndash;Processes&ndash;Platforms coding scheme with 17 sub-dimensions.
-            Target venues include ACM Computing Surveys, Government Information Quarterly,
-            and Computer Law &amp; Security Review.
+            This paper introduces a 17-sub-dimension coding framework for AI
+            regulatory analysis, applies it across 10 jurisdictions (170
+            classifications validated at 87.6% AI-human agreement), and identifies
+            two structural determinants of regulatory coherence: classification as
+            a cross-dimensional trigger and the institutional creation threshold.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
